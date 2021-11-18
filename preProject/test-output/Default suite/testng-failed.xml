@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="preProject.UserPage">
+      <class name="preProject.DashboardPage">
         <methods>
-          <include name="tearDown"/>
           <include name="setup"/>
-          <include name="VerifyData" invocation-numbers="1 2 3"/>
+          <include name="checkLogoutLink"/>
+          <include name="tearDown"/>
+          <include name="checkFooterLink"/>
         </methods>
-      </class> <!-- preProject.UserPage -->
+      </class> <!-- preProject.DashboardPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

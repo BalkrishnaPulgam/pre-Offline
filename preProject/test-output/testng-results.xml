@@ -1,225 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3350" started-at="2021-11-18T12:06:34 IST" finished-at="2021-11-18T12:06:37 IST">
+  <suite name="Default suite" duration-ms="13000" started-at="2021-11-18T13:55:10 IST" finished-at="2021-11-18T13:55:23 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3350" started-at="2021-11-18T12:06:34 IST" finished-at="2021-11-18T12:06:37 IST">
-      <class name="preProject.UserPage">
-        <test-method status="PASS" signature="setup()[pri:0, instance:preProject.UserPage@7fad8c79]" name="setup" is-config="true" duration-ms="4078" started-at="2021-11-18T12:06:30 IST" finished-at="2021-11-18T12:06:34 IST">
+    <test name="Default test" duration-ms="13000" started-at="2021-11-18T13:55:10 IST" finished-at="2021-11-18T13:55:23 IST">
+      <class name="preProject.DashboardPage">
+        <test-method status="PASS" signature="setup()[pri:0, instance:preProject.DashboardPage@365c30cc]" name="setup" is-config="true" duration-ms="4615" started-at="2021-11-18T13:55:05 IST" finished-at="2021-11-18T13:55:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyBrowserTitle()[pri:1, instance:preProject.UserPage@7fad8c79]" name="verifyBrowserTitle" duration-ms="1734" started-at="2021-11-18T12:06:34 IST" finished-at="2021-11-18T12:06:36 IST">
+        <test-method status="PASS" signature="verifyBrowserTitle()[pri:1, instance:preProject.DashboardPage@365c30cc]" name="verifyBrowserTitle" duration-ms="1304" started-at="2021-11-18T13:55:10 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBrowserTitle -->
-        <test-method status="PASS" signature="verifyCurrentTitle()[pri:2, instance:preProject.UserPage@7fad8c79]" name="verifyCurrentTitle" duration-ms="18" started-at="2021-11-18T12:06:36 IST" finished-at="2021-11-18T12:06:36 IST">
+        <test-method status="PASS" signature="VerifyBrowserUrl()[pri:2, instance:preProject.DashboardPage@365c30cc]" name="VerifyBrowserUrl" duration-ms="8" started-at="2021-11-18T13:55:11 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCurrentTitle -->
-        <test-method status="PASS" signature="VerifyHeader()[pri:3, instance:preProject.UserPage@7fad8c79]" name="VerifyHeader" duration-ms="42" started-at="2021-11-18T12:06:36 IST" finished-at="2021-11-18T12:06:36 IST">
+        </test-method> <!-- VerifyBrowserUrl -->
+        <test-method status="PASS" signature="VerifyHeader()[pri:3, instance:preProject.DashboardPage@365c30cc]" name="VerifyHeader" duration-ms="45" started-at="2021-11-18T13:55:11 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyHeader -->
-        <test-method status="PASS" signature="VerifyBoxHeader()[pri:4, instance:preProject.UserPage@7fad8c79]" name="VerifyBoxHeader" duration-ms="48" started-at="2021-11-18T12:06:36 IST" finished-at="2021-11-18T12:06:36 IST">
+        <test-method status="PASS" signature="verifyMenu()[pri:4, instance:preProject.DashboardPage@365c30cc]" name="verifyMenu" duration-ms="155" started-at="2021-11-18T13:55:11 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyBoxHeader -->
-        <test-method status="PASS" signature="VerifyColumnName()[pri:4, instance:preProject.UserPage@7fad8c79]" name="VerifyColumnName" duration-ms="191" started-at="2021-11-18T12:06:36 IST" finished-at="2021-11-18T12:06:36 IST">
+        </test-method> <!-- verifyMenu -->
+        <test-method status="PASS" signature="verifyCourses()[pri:5, instance:preProject.DashboardPage@365c30cc]" name="verifyCourses" duration-ms="104" started-at="2021-11-18T13:55:11 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyColumnName -->
-        <test-method status="PASS" signature="VerifyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:preProject.UserPage@7fad8c79]" name="VerifyData" duration-ms="310" started-at="2021-11-18T12:06:36 IST" data-provider="userData" finished-at="2021-11-18T12:06:36 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kiran]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[kiran@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9898989898]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Java/J2EE]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Male]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Maharashtra]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyCourses -->
+        <test-method status="PASS" signature="verifyMoreInfoCount()[pri:6, instance:preProject.DashboardPage@365c30cc]" name="verifyMoreInfoCount" duration-ms="22" started-at="2021-11-18T13:55:11 IST" finished-at="2021-11-18T13:55:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyData -->
-        <test-method status="PASS" signature="VerifyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:preProject.UserPage@7fad8c79]" name="VerifyData" duration-ms="316" started-at="2021-11-18T12:06:36 IST" data-provider="userData" finished-at="2021-11-18T12:06:37 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sagar]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sagar@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[999999999]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Selenium]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Male]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Punjab]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyMoreInfoCount -->
+        <test-method status="PASS" signature="verifyCourses1()[pri:7, instance:preProject.DashboardPage@365c30cc]" name="verifyCourses1" duration-ms="960" started-at="2021-11-18T13:55:12 IST" finished-at="2021-11-18T13:55:12 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyData -->
-        <test-method status="PASS" signature="VerifyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:preProject.UserPage@7fad8c79]" name="VerifyData" duration-ms="303" started-at="2021-11-18T12:06:37 IST" data-provider="userData" finished-at="2021-11-18T12:06:37 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Monica]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[monica@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1111111111]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Python]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Female]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Maharashtra]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyCourses1 -->
+        <test-method status="PASS" signature="checkUsersLink()[pri:8, instance:preProject.DashboardPage@365c30cc]" name="checkUsersLink" duration-ms="341" started-at="2021-11-18T13:55:12 IST" finished-at="2021-11-18T13:55:13 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyData -->
-        <test-method status="PASS" signature="VerifyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:preProject.UserPage@7fad8c79]" name="VerifyData" duration-ms="307" started-at="2021-11-18T12:06:37 IST" data-provider="userData" finished-at="2021-11-18T12:06:37 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kimaya]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[kimaya@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[999999999]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[PHP]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Female]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Punjab]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- checkUsersLink -->
+        <test-method status="PASS" signature="checkOperatorsLink()[pri:9, instance:preProject.DashboardPage@365c30cc]" name="checkOperatorsLink" duration-ms="345" started-at="2021-11-18T13:55:13 IST" finished-at="2021-11-18T13:55:13 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:preProject.UserPage@7fad8c79]" name="tearDown" is-config="true" duration-ms="190" started-at="2021-11-18T12:06:37 IST" finished-at="2021-11-18T12:06:37 IST">
+        </test-method> <!-- checkOperatorsLink -->
+        <test-method status="PASS" signature="checkUsefulLinksLink()[pri:10, instance:preProject.DashboardPage@365c30cc]" name="checkUsefulLinksLink" duration-ms="299" started-at="2021-11-18T13:55:13 IST" finished-at="2021-11-18T13:55:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkUsefulLinksLink -->
+        <test-method status="PASS" signature="checkDownloadsLink()[pri:11, instance:preProject.DashboardPage@365c30cc]" name="checkDownloadsLink" duration-ms="342" started-at="2021-11-18T13:55:13 IST" finished-at="2021-11-18T13:55:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDownloadsLink -->
+        <test-method status="PASS" signature="checkFooterLink()[pri:12, instance:preProject.DashboardPage@365c30cc]" name="checkFooterLink" duration-ms="8650" started-at="2021-11-18T13:55:14 IST" finished-at="2021-11-18T13:55:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFooterLink -->
+        <test-method status="PASS" signature="checkLogoutLink()[pri:13, instance:preProject.DashboardPage@365c30cc]" name="checkLogoutLink" duration-ms="344" started-at="2021-11-18T13:55:22 IST" finished-at="2021-11-18T13:55:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogoutLink -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:preProject.DashboardPage@365c30cc]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-11-18T13:55:23 IST" finished-at="2021-11-18T13:55:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- preProject.UserPage -->
+      </class> <!-- preProject.DashboardPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,6 +3,7 @@ package preProject;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -41,19 +42,31 @@ public class DashboardPage {
 		driver.findElement(By.id("password")).sendKeys("123456");
 		driver.findElement(By.xpath("//button")).click();
 		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
 		String exp = "JavaByKiran | Dashboard";
+		System.out.println("Expected Browser Title: "+exp);
 		Assert.assertEquals(act, exp);
 	}
 	
-	@Test(priority=2)
+	@Test(priority = 2)
+	public void VerifyBrowserUrl() {
+		String act = driver.getCurrentUrl();
+		System.out.println("Actual Browser Url: "+act);
+		String exp = "file:///E:/Selenium/Offline%20Website/Offline%20Website/pages/examples/dashboard.html";
+		System.out.println("Expected Browser Url: "+exp);
+		Assert.assertEquals(act, exp);
+	}
+	
+	@Test(priority=3)
 	public void VerifyHeader() {
-		String actText=driver.findElement(By.xpath("//h1")).getText();
-		System.out.println(actText);
-		String expTest="Dashboard Courses Offered";
-		Assert.assertEquals(actText, expTest);
+		String act=driver.findElement(By.xpath("//h1")).getText();
+		System.out.println("Actual: "+ act);
+		String exp="Dashboard Courses Offered";
+		System.out.println("Expected: "+ exp);
+		Assert.assertEquals(act, exp);
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void verifyMenu() {
 		ArrayList<String> actlist = new ArrayList<String>();
 		actlist.add("Dashboard");
@@ -74,7 +87,7 @@ public class DashboardPage {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void verifyCourses() {
 		ArrayList<String> actlist = new ArrayList<String>();
 		actlist.add("Selenium");
@@ -92,14 +105,14 @@ public class DashboardPage {
 		Assert.assertEquals(actlist, expList);
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void verifyMoreInfoCount() {
 		List<WebElement> list = driver.findElements(By.className("small-box-footer"));
 		int count = list.size();
 		Assert.assertEquals(count, 4);
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void verifyCourses1() throws Exception {
 
 		List<String> excelList = new ArrayList<String>();
@@ -114,7 +127,6 @@ public class DashboardPage {
 		for (int i = 0; i <= count; i++) {
 			Cell cell = sh.getRow(i).getCell(0);
 			String text = df.formatCellValue(cell);
-			System.out.println(text);
 			excelList.add(text);
 		}
 
@@ -130,53 +142,79 @@ public class DashboardPage {
 	}
 	
 	
-	@Test(priority=7)
+	@Test(priority=8)
 	public void checkUsersLink() {
 		driver.findElement(By.linkText("Users")).click();
 		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
 		String exp = "JavaByKiran | User";
-		Assert.assertEquals(act, exp);
-	}
-	
-	@Test(priority=8)
-	public void checkOperatorsLink() {
-		driver.findElement(By.linkText("Operators")).click();
-		String act=driver.getTitle();
-		String exp = "JavaByKiran | Operators";
+		System.out.println("Expected Browser Title: "+exp);
 		Assert.assertEquals(act, exp);
 	}
 	
 	@Test(priority=9)
-	public void checkUsefulLinksLink() {
-		driver.findElement(By.linkText("Useful Links")).click();
+	public void checkOperatorsLink() {
+		driver.findElement(By.linkText("Operators")).click();
 		String act=driver.getTitle();
-		String exp = "JavaByKiran | Useful Links";
-		Assert.assertEquals(act, exp);
-	}
-
-	@Test(priority=10)
-	public void checkDownloadsLink() {
-		driver.findElement(By.linkText("Downloads")).click();
-		String act=driver.getTitle();
-		String exp = "JavaByKiran | Downloads";
+		System.out.println("Actual Browser Title: "+act);
+		String exp = "JavaByKiran | Operators";
+		System.out.println("Expected Browser Title: "+exp);
 		Assert.assertEquals(act, exp);
 	}
 	
-	@Test(priority=11)
-	public void checkFooterLink() {
-		driver.findElement(By.linkText("JavaByKiran")).click();
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	@Test(priority=10)
+	public void checkUsefulLinksLink() {
+		driver.findElement(By.linkText("Useful Links")).click();
 		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
+		String exp = "JavaByKiran | Useful Links";
+		System.out.println("Expected Browser Title: "+exp);
+		Assert.assertEquals(act, exp);
+	}
+
+	@Test(priority=11)
+	public void checkDownloadsLink() {
+		driver.findElement(By.linkText("Downloads")).click();
+		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
+		String exp = "JavaByKiran | Downloads";
+		System.out.println("Expected Browser Title: "+exp);
+		Assert.assertEquals(act, exp);
+	}
+	
+	@Test(priority=12)
+	public void checkFooterLink() throws Exception {
+		String mainWin = driver.getWindowHandle();
+		driver.findElement(By.linkText("JavaByKiran")).click();
+		Set<String> allWins=	driver.getWindowHandles();
+		for (String window : allWins) {
+			if(!mainWin.equals(window))
+				driver.switchTo().window(window);
+		}
+	       		
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		Thread.sleep(6000);
+		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
 		String exp = "Java Classes in Pune | Selenium Training | Python Courses in pune";
+		System.out.println("Expected Browser Title: "+exp);
 		Assert.assertEquals(act, exp);
 		
 	}
 	
-	@Test(priority=12)
+	@Test(priority=13)
 	public void checkLogoutLink() {
+		String mainWin = driver.getWindowHandle();
+		Set<String> allWins=	driver.getWindowHandles();
+		for (String window : allWins) {
+			if(!mainWin.equals(window))
+				driver.switchTo().window(window);
+		}
 		driver.findElement(By.linkText("Logout")).click();
 		String act=driver.getTitle();
+		System.out.println("Actual Browser Title: "+act);
 		String exp = "JavaByKiran | Log in";
+		System.out.println("Expected Browser Title "+exp);
 		Assert.assertEquals(act, exp);
 	}
 

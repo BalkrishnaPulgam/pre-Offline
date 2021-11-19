@@ -8,6 +8,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+
 public class RegistrationPage {
 	WebDriver driver;
 
@@ -97,6 +98,20 @@ public class RegistrationPage {
 		String exp = "JavaByKiran | Log in";
 		System.out.println("Expected Browser Title: "+exp);
 		Assert.assertEquals(act, exp);
+	}
+	
+	
+	@Test(priority=9)
+		public void verifyAlertMsg() {
+		driver.findElement(By.id("name")).sendKeys("abc");
+		driver.findElement(By.id("mobile")).sendKeys("123456");
+		driver.findElement(By.id("email")).sendKeys("k@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456789");
+		driver.findElement(By.xpath("//button")).click();
+		String act=driver.switchTo().alert().getText();
+		String exp="User registered successfully.";
+		Assert.assertEquals(act, exp);
+		
 	}
 
 }

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="preProject.DashboardPage">
+      <class name="preProject.UserPage">
         <methods>
-          <include name="setup"/>
-          <include name="checkLogoutLink"/>
           <include name="tearDown"/>
-          <include name="checkFooterLink"/>
+          <include name="setup"/>
+          <include name="verfyTotalNumberOfUser"/>
         </methods>
-      </class> <!-- preProject.DashboardPage -->
+      </class> <!-- preProject.UserPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

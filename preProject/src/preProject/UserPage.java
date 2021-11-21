@@ -11,10 +11,12 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.util.SystemOutLogger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -30,7 +32,7 @@ public class UserPage {
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "D:/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("file:///E:/Selenium/Offline%20Website/Offline%20Website/index.html");
+		driver.get("file:///E:/Selenium/Offline%20Website/Offline%20Website/pages/examples/users.html");
 	}
 
 	@AfterSuite
@@ -38,39 +40,22 @@ public class UserPage {
 		driver.close();
 	}
 
+	
 	@Test(priority = 1)
-	public void verifyBrowserTitle() {
-		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
-		driver.findElement(By.id("password")).sendKeys("123456");
-		driver.findElement(By.xpath("//button")).click();
-		driver.findElement(By.linkText("Users")).click();
-		String act = driver.getTitle();
-		String exp = "JavaByKiran | User";
-		Assert.assertEquals(act, exp);
-	}
-
-	@Test(priority = 2)
-	public void verifyBrowserUrl() {
-		String act = driver.getCurrentUrl();
-		String exp = "file:///E:/Selenium/Offline%20Website/Offline%20Website/pages/examples/users.html";
-		Assert.assertEquals(act, exp);
-	}
-
-	@Test(priority = 3)
 	public void VerifyHeader() {
 		String actText = driver.findElement(By.xpath("//h1")).getText();
 		String expTest = "Users";
 		Assert.assertEquals(actText, expTest);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 2)
 	public void VerifyBoxHeader() {
 		String actText = driver.findElement(By.xpath("//h3")).getText();
 		String expTest = "User List";
 		Assert.assertEquals(actText, expTest);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void VerifyColumnName() {
 
 		ArrayList<String> expList = new ArrayList<String>();
@@ -93,9 +78,9 @@ public class UserPage {
 
 		Assert.assertEquals(actList, expList);
 	}
-	
-	@Test(priority = 5)
-	public void verfyTotalNumberOfUser() throws Exception{
+
+	@Test(priority = 4)
+	public void verfyTotalNumberOfUser() throws Exception {
 		List<WebElement> userList = driver.findElements(By.xpath("//tr//td[2]"));
 
 		ArrayList<String> expList = new ArrayList<String>();
@@ -112,19 +97,18 @@ public class UserPage {
 			String text = df.formatCellValue(cell);
 			expList.add(text);
 		}
-		
+
 		ArrayList<String> actList = new ArrayList<String>();
 
 		for (int i = 0; i < userList.size(); i++) {
-			
-				String text = userList.get(i).getText();
-				actList.add(text);
-			
+
+			String text = userList.get(i).getText();
+			actList.add(text);
+
 		}
 
 		Assert.assertEquals(actList, expList);
 	}
-	
 
 	@Test(priority = 5)
 	public void VerifyMaleUsers() {
@@ -268,6 +252,98 @@ public class UserPage {
 
 	}
 
+	@Test(priority = 10, description = "Checking invalid mobile users")
+	public void CheckInvalidMobileUsers() throws Exception {
+
+		ArrayList<String> expList = new ArrayList<String>();
+		expList.add("Sagar");
+		expList.add("Kimaya");
+
+		ArrayList<String> actList = new ArrayList<String>();
+
+		List<WebElement> users = driver.findElements(By.xpath("//tr//td[2]"));
+		List<WebElement> mobile = driver.findElements(By.xpath("//tr//td[4]"));
+
+		for (int i = 0; i < mobile.size(); i++) {
+			String mob = mobile.get(i).getText();
+			char[] c = mob.toCharArray();
+			int lenght = c.length;
+
+			if (lenght < 10) {
+				String text = users.get(i).getText();
+				actList.add(text);
+			}
+		}
+		System.out.println("invalid mobile users: " + actList);
+		Assert.assertEquals(actList, expList);
+
+	}
+
+	@Test(priority = 11, description = "verifying that all users having correct gmail")
+	public void verifyGmailUsers() throws Exception {
+
+		ArrayList<String> expList = new ArrayList<String>();
+		expList.add("kiran@gmail.com");
+		expList.add("sagar@gmail.com");
+		expList.add("monica@gmail.com");
+		expList.add("kimaya@gmail.com");
+
+		ArrayList<String> actList = new ArrayList<String>();
+
+		List<WebElement> gmail = driver.findElements(By.xpath("//tr//td[3]"));
+
+		for (int i = 0; i < gmail.size(); i++) {
+			String mail = gmail.get(i).getText();
+			if (mail.contains("@gmail.com")) {
+				actList.add(mail);
+			}
+		}
+		System.out.println("valid gmail users: " + actList);
+		Assert.assertEquals(actList, expList);
+
+	}
+	
+	@Test(priority=12,description = "verifying Alert Msg while deleting user.")
+	public void verifyingAlertMsg() {
+		driver.findElement(By.xpath("//tr[3]//td[8]")).click();
+		Alert a=driver.switchTo().alert();
+		String act=a.getText();
+		String exp="Are you sure you want to delete this user";
+		a.accept();
+		a.accept();
+		Assert.assertEquals(act, exp);
+		
+	}
+	
+	
+	@Test(priority=13)
+	public void VerifyAddUserAlertMsg() {
+		driver.findElement(By.xpath("//button[text()='Add User']")).click();
+		driver.findElement(By.id("username")).sendKeys("Balkrishna");
+		driver.findElement(By.id("mobile")).sendKeys("123456789");
+		driver.findElement(By.id("email")).sendKeys("B@gmail.com");
+		driver.findElement(By.id("course")).sendKeys("Java");
+		driver.findElement(By.id("Male")).click();
+		WebElement element=driver.findElement(By.xpath("//select"));
+		Select sel=new Select(element);
+		sel.selectByVisibleText("Maharashtra");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.id("submit")).click();
+		Alert a=driver.switchTo().alert();
+		String act=a.getText();
+		a.accept();
+		String exp="User Added Successfully. You can not see added user.";
+		Assert.assertEquals(act, exp);
+		
+		}
+	
+	
+	
+	
+	
+	
+	
+	
 	public ArrayList<String> data(String filePath, String SheetName, int refColNumber, int OutputColNumber, String txt)
 			throws Exception {
 		ArrayList<String> expList = new ArrayList<String>();
@@ -293,20 +369,6 @@ public class UserPage {
 		}
 		return expList;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	/*
 	 * 

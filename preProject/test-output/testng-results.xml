@@ -1,61 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4270" started-at="2021-11-19T21:11:09 IST" finished-at="2021-11-19T21:11:14 IST">
+  <suite name="Default suite" duration-ms="4022" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:32 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4270" started-at="2021-11-19T21:11:09 IST" finished-at="2021-11-19T21:11:14 IST">
+    <test name="Default test" duration-ms="4022" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:32 IST">
       <class name="preProject.UserPage">
-        <test-method status="PASS" signature="setup()[pri:0, instance:preProject.UserPage@365c30cc]" name="setup" is-config="true" duration-ms="7136" started-at="2021-11-19T21:11:02 IST" finished-at="2021-11-19T21:11:09 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:preProject.UserPage@365c30cc]" name="setup" is-config="true" duration-ms="5002" started-at="2021-11-21T11:51:23 IST" finished-at="2021-11-21T11:51:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyBrowserTitle()[pri:1, instance:preProject.UserPage@365c30cc]" name="verifyBrowserTitle" duration-ms="1990" started-at="2021-11-19T21:11:10 IST" finished-at="2021-11-19T21:11:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBrowserTitle -->
-        <test-method status="PASS" signature="verifyBrowserUrl()[pri:2, instance:preProject.UserPage@365c30cc]" name="verifyBrowserUrl" duration-ms="18" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBrowserUrl -->
-        <test-method status="PASS" signature="VerifyHeader()[pri:3, instance:preProject.UserPage@365c30cc]" name="VerifyHeader" duration-ms="40" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:12 IST">
+        <test-method status="PASS" signature="VerifyHeader()[pri:1, instance:preProject.UserPage@365c30cc]" name="VerifyHeader" duration-ms="60" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyHeader -->
-        <test-method status="PASS" signature="VerifyBoxHeader()[pri:4, instance:preProject.UserPage@365c30cc]" name="VerifyBoxHeader" duration-ms="37" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:12 IST">
+        <test-method status="PASS" signature="VerifyBoxHeader()[pri:2, instance:preProject.UserPage@365c30cc]" name="VerifyBoxHeader" duration-ms="47" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyBoxHeader -->
-        <test-method status="PASS" signature="VerifyColumnName()[pri:4, instance:preProject.UserPage@365c30cc]" name="VerifyColumnName" duration-ms="218" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:12 IST">
+        <test-method status="PASS" signature="VerifyColumnName()[pri:3, instance:preProject.UserPage@365c30cc]" name="VerifyColumnName" duration-ms="182" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyColumnName -->
-        <test-method status="PASS" signature="VerifyMaleUsers()[pri:5, instance:preProject.UserPage@365c30cc]" name="VerifyMaleUsers" duration-ms="168" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyMaleUsers -->
-        <test-method status="PASS" signature="verfyTotalNumberOfUser()[pri:5, instance:preProject.UserPage@365c30cc]" name="verfyTotalNumberOfUser" duration-ms="1010" started-at="2021-11-19T21:11:12 IST" finished-at="2021-11-19T21:11:13 IST">
+        <test-method status="PASS" signature="verfyTotalNumberOfUser()[pri:4, instance:preProject.UserPage@365c30cc]" name="verfyTotalNumberOfUser" duration-ms="1040" started-at="2021-11-21T11:51:28 IST" finished-at="2021-11-21T11:51:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verfyTotalNumberOfUser -->
-        <test-method status="PASS" signature="VerifyFemaleUsers()[pri:6, instance:preProject.UserPage@365c30cc]" name="VerifyFemaleUsers" duration-ms="176" started-at="2021-11-19T21:11:13 IST" finished-at="2021-11-19T21:11:13 IST">
+        <test-method status="PASS" signature="VerifyMaleUsers()[pri:5, instance:preProject.UserPage@365c30cc]" name="VerifyMaleUsers" duration-ms="138" started-at="2021-11-21T11:51:29 IST" finished-at="2021-11-21T11:51:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyMaleUsers -->
+        <test-method status="PASS" signature="VerifyFemaleUsers()[pri:6, instance:preProject.UserPage@365c30cc]" name="VerifyFemaleUsers" duration-ms="194" started-at="2021-11-21T11:51:29 IST" finished-at="2021-11-21T11:51:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyFemaleUsers -->
-        <test-method status="PASS" signature="VerifyStateUsers()[pri:7, instance:preProject.UserPage@365c30cc]" name="VerifyStateUsers" duration-ms="230" started-at="2021-11-19T21:11:13 IST" description="verifying that users from Maharashtra" finished-at="2021-11-19T21:11:13 IST">
+        <test-method status="PASS" signature="VerifyStateUsers()[pri:7, instance:preProject.UserPage@365c30cc]" name="VerifyStateUsers" duration-ms="248" started-at="2021-11-21T11:51:30 IST" description="verifying that users from Maharashtra" finished-at="2021-11-21T11:51:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyStateUsers -->
-        <test-method status="PASS" signature="VerifyKiranCourse()[pri:8, instance:preProject.UserPage@365c30cc]" name="VerifyKiranCourse" duration-ms="144" started-at="2021-11-19T21:11:13 IST" description="verifying that Kiran having Java/J2EE course" finished-at="2021-11-19T21:11:14 IST">
+        <test-method status="PASS" signature="VerifyKiranCourse()[pri:8, instance:preProject.UserPage@365c30cc]" name="VerifyKiranCourse" duration-ms="162" started-at="2021-11-21T11:51:30 IST" description="verifying that Kiran having Java/J2EE course" finished-at="2021-11-21T11:51:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyKiranCourse -->
-        <test-method status="PASS" signature="VerifySagarState()[pri:9, instance:preProject.UserPage@365c30cc]" name="VerifySagarState" duration-ms="156" started-at="2021-11-19T21:11:14 IST" description="verifying that Sagar from Punjab" finished-at="2021-11-19T21:11:14 IST">
+        <test-method status="PASS" signature="VerifySagarState()[pri:9, instance:preProject.UserPage@365c30cc]" name="VerifySagarState" duration-ms="153" started-at="2021-11-21T11:51:30 IST" description="verifying that Sagar from Punjab" finished-at="2021-11-21T11:51:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifySagarState -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:preProject.UserPage@365c30cc]" name="tearDown" is-config="true" duration-ms="123" started-at="2021-11-19T21:11:14 IST" finished-at="2021-11-19T21:11:14 IST">
+        <test-method status="PASS" signature="CheckInvalidMobileUsers()[pri:10, instance:preProject.UserPage@365c30cc]" name="CheckInvalidMobileUsers" duration-ms="134" started-at="2021-11-21T11:51:30 IST" description="Checking invalid mobile users" finished-at="2021-11-21T11:51:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckInvalidMobileUsers -->
+        <test-method status="PASS" signature="verifyGmailUsers()[pri:11, instance:preProject.UserPage@365c30cc]" name="verifyGmailUsers" duration-ms="105" started-at="2021-11-21T11:51:30 IST" description="verifying that all users having correct gmail" finished-at="2021-11-21T11:51:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGmailUsers -->
+        <test-method status="PASS" signature="verifyingAlertMsg()[pri:12, instance:preProject.UserPage@365c30cc]" name="verifyingAlertMsg" duration-ms="135" started-at="2021-11-21T11:51:31 IST" description="verifying Alert Msg while deleting user." finished-at="2021-11-21T11:51:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingAlertMsg -->
+        <test-method status="PASS" signature="VerifyAddUserAlertMsg()[pri:13, instance:preProject.UserPage@365c30cc]" name="VerifyAddUserAlertMsg" duration-ms="1325" started-at="2021-11-21T11:51:31 IST" finished-at="2021-11-21T11:51:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddUserAlertMsg -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:preProject.UserPage@365c30cc]" name="tearDown" is-config="true" duration-ms="2239" started-at="2021-11-21T11:51:32 IST" finished-at="2021-11-21T11:51:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

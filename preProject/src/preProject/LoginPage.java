@@ -193,4 +193,15 @@ public class LoginPage {
 	}
 	
 	
+	
+	@Test(priority = 16)
+	public void verifyBrowserUrlAfterValidLogin() {
+		String act = driver.getCurrentUrl();
+		System.out.println("Actual Browser Url: "+act);
+		String exp = "file:///E:/Selenium/Offline%20Website/Offline%20Website/pages/examples/dashboard.html";
+		System.out.println("Expected Browser Url: "+exp);
+		Assert.assertEquals(act, exp);
+	}
+	
+	
 }
